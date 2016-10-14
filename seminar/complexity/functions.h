@@ -13,19 +13,19 @@ bool contains(const int numbers[], int size, int element);
 
 int sumOfDigits(int number);
 
-bool binarySearch(const int numbers[], int size, int element);
+int binarySearch(const int numbers[], int size, int element);
 
 int factorial(int n);
 
 int fibonacci(int n);
 
-bool contains(const int numbers[30][], int size, int element);
+bool containsInMatrix(const int numbers[][3], int size, int element);
 
 void bubbleSort(int numbers[], int size);
 
 int productOfEvenPositions(int numbers[], int size);
 
-bool searchString(string haystack, string needle);
+int searchString(string haystack, string needle);
 
 string decimalToBinary(int number);
 
