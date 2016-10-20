@@ -71,9 +71,9 @@ void testBinaryFileInput() {
 }
 
 int main() {
-//  testTextFileOutput();
-//  testBinaryFileOutput();
-//  testTextFileInput();
+  testTextFileOutput();
+  testBinaryFileOutput();
+  testTextFileInput();
   testBinaryFileInput();
 
   return 0;
