@@ -3,7 +3,6 @@
 
 using std::ofstream;
 using std::ifstream;
-using std::fstream;
 using std::ios;
 using std::cout;
 
