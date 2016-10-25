@@ -130,12 +130,12 @@ class QuizReader {
       total += tempResult;
     }
 
-    if (count == 0) {
-      // return zeroes if not enough results
-      return total;
+    if (count > 0) {
+      return total /= count;
     }
     else {
-      return total /= count;
+      // return zeroes if not enough results
+      return total;
     }
   }
 
