@@ -31,7 +31,7 @@ struct Result {
     return sum;
   }
 
-  Result &operator+=(const Result &other) {
+  Result& operator+=(const Result& other) {
     for (int i = 0; i < 20; ++i) {
       questions[i] += other.questions[i];
     }
@@ -39,7 +39,7 @@ struct Result {
     return *this;
   }
 
-  Result &operator-=(const Result &other) {
+  Result& operator-=(const Result& other) {
     for (int i = 0; i < 20; ++i) {
       questions[i] -= other.questions[i];
     }
@@ -47,7 +47,7 @@ struct Result {
     return *this;
   }
 
-  Result &operator/=(const double n) {
+  Result& operator/=(const double n) {
     for (int i = 0; i < 20; ++i) {
       questions[i] /= n;
     }
@@ -55,7 +55,7 @@ struct Result {
     return *this;
   }
 
-  Result &square() {
+  Result& square() {
     for (int i = 0; i < 20; ++i) {
       questions[i] *= questions[i];
     }
@@ -63,7 +63,7 @@ struct Result {
     return *this;
   }
 
-  Result &squareRoot() {
+  Result& squareRoot() {
     for (int i = 0; i < 20; ++i) {
       questions[i] = sqrt(questions[i]);
     }
@@ -72,14 +72,14 @@ struct Result {
   }
 };
 
-istream &operator>>(istream &in, Result &result) {
+istream& operator>>(istream& in, Result& result) {
   in >> result.name;
   for (int i = 0; i < 20; i++) {
     in >> result.questions[i];
   }
 }
 
-ostream &operator<<(ostream &out, const Result &result) {
+ostream& operator<<(ostream& out, const Result& result) {
   out << result.name << "\n";
   for (int i = 0; i < 20; i++) {
     out << result.questions[i] << " ";
@@ -90,7 +90,7 @@ ostream &operator<<(ostream &out, const Result &result) {
 class QuizSaver {
   ofstream file;
 public:
-  QuizSaver(const char *filename) {
+  QuizSaver(const char* filename) {
     file.open(filename, ios::app);
   }
 
@@ -140,7 +140,7 @@ class QuizReader {
   }
 
 public:
-  QuizReader(const char *filename) {
+  QuizReader(const char* filename) {
     file.open(filename);
   }
 
