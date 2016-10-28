@@ -72,21 +72,6 @@ struct Result {
     }
 };
 
-istream& operator>>(istream& in, Result& result) {
-  in >> result.name;
-  for (int i = 0; i < 20; i++) {
-    in >> result.questions[i];
-  }
-}
-
-ostream& operator<<(ostream& out, const Result& result) {
-  out << result.name << "\n";
-  for (int i = 0; i < 20; i++) {
-    out << result.questions[i] << " ";
-  }
-  out << "\n";
-}
-
 class QuizSaver {
     ofstream file;
 public:
