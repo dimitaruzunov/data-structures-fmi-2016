@@ -3,7 +3,7 @@
 using std::cout;
 using std::boolalpha;
 
-bool are_parentheses_correct(const char* expression) {
+bool validate_parentheses(const char* expression) {
   int opening_parentheses_count = 0;
 
   while (*expression) {
@@ -24,9 +24,9 @@ bool are_parentheses_correct(const char* expression) {
 }
 
 int main() {
-  cout << boolalpha << are_parentheses_correct("(1 + 2) * ((2 + 3) / 2)") << '\n';
-  cout << boolalpha << are_parentheses_correct("(1 + 2)) * ((2 + 3) / 2)") << '\n';
-  cout << boolalpha << are_parentheses_correct("(1 + 2))( * ((2 + 3) / 2)") << '\n';
+  cout << boolalpha << validate_parentheses("(1 + 2) * ((2 + 3) / 2)") << '\n';
+  cout << boolalpha << validate_parentheses("(1 + 2)) * ((2 + 3) / 2)") << '\n';
+  cout << boolalpha << validate_parentheses("(1 + 2))( * ((2 + 3) / 2)") << '\n';
 
   return 0;
 }
