@@ -21,3 +21,24 @@
 изход като последователност от байтове, представени в десетична бройна система.
 
 [Решение](print-binary-file-bytes.cpp)
+
+Студенти
+--------
+Използвайки класа [`Student`](students/student.h), чиято реализация се намира
+в директорията [students](students), напишете следните функции:
+* `Student* input_students(int& number_of_students)` — въвежда
+`number_of_students` от стандартния вход, след което въвежда
+`number_of_students` на брой студенти от стандартния вход и връща масив от
+въведените студенти
+* `void save_students(Student* students, int number_of_students)` — записва
+студентите от масива `students` в текстов файл `students.txt`
+* `void save_graduates()` — чете всички студенти от текстовия файл
+`students.txt`, като записва студентите с оценка не по-малка от 3
+в двоичен файл `graduates`
+* `void raise_grade(unsigned fn)` — чете всички студенти от
+двоичния файл `graduates`, като повишава оценката с 1 на студент с факултетен
+номер `fn` и го презаписва
+* `void print_graduates()` — чете всички студенти от двоичния файл `graduates`
+и ги извежда на стандартния изход
+
+[Решение](students/students.cpp)
