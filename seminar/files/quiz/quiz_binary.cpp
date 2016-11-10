@@ -76,7 +76,7 @@ class QuizSaver {
     ofstream file;
 public:
     QuizSaver(const char* filename) {
-      file.open(filename, ios::binary|ios::app);
+      file.open(filename, ios::binary | ios::app);
     }
 
     ~QuizSaver() {
