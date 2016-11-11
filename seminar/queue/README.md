@@ -17,24 +17,17 @@
 
 7
 
-
 Anastas М
 
-
-Geogri M
-
+Georgi M
 
 Maria F
 
-
 Rosen M
-
 
 Hristo M
 
-
 Strahil M
-
 
 Nikolina F
 
