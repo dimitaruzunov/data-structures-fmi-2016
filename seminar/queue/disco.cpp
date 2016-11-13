@@ -42,7 +42,7 @@ public:
   }
 
   void process() {
-    int size = people.size();
+    unsigned long size = people.size();
     bool processedWoman = false;
     for (int i = 0; i < size; ++i) {
       if (!processedWoman && people.front().isWoman) {
@@ -67,7 +67,6 @@ void processQueue() {
 
   cin >> n;
   Person person;
-  char sex;
   for (int i = 0; i < n; ++i) {
     cin >> person;
     people.push(person);
