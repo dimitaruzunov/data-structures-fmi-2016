@@ -24,10 +24,8 @@ istream& operator>>(istream& in, Person& person) {
   return in;
 }
 
-ostream& operator<<(ostream& out, Person& person) {
-  out << person.name << " ";
-
-  return out;
+ostream& operator<<(ostream& out, const Person& person) {
+  return out << person.name << " ";
 }
 
 class Lobby {
@@ -35,7 +33,7 @@ class Lobby {
 
 public:
 
-  bool empty() {
+  bool empty() const {
     return people.empty();
   }
 
@@ -65,34 +63,31 @@ public:
 
 void processQueue() {
   int n;
-  queue<Person> q;
+  queue<Person> people;
 
   cin >> n;
   Person person;
   char sex;
   for (int i = 0; i < n; ++i) {
-    cin >> person.name;
-    cin >> sex;
-    person.isWoman = (sex == 'F');
-    q.push(person);
+    cin >> person;
+    people.push(person);
   }
 
   Lobby lobby;
   for (int i = 0; i < 5; ++i) {
-    if (!q.empty()) {
-      lobby.addPerson(q.front());
-      q.pop();
+    if (!people.empty()) {
+      lobby.addPerson(people.front());
+      people.pop();
     }
   }
-  while (!q.empty()) {
+  while (!people.empty()) {
     lobby.process();
-    lobby.addPerson(q.front());
-    q.pop();
+    lobby.addPerson(people.front());
+    people.pop();
   }
   while (!lobby.empty()) {
     lobby.process();
   }
-
 }
 
 int main() {
