@@ -2,9 +2,9 @@
 ======
 
 Ще използваме следните реализации на структурата от данни списък:
-* `[std::list](http://www.cplusplus.com/reference/list/list)` –
+* [`std::list`](http://www.cplusplus.com/reference/list/list) –
 двусвързан списък (свързано представяне)
-* `[std::vector](http://www.cplusplus.com/reference/vector/vector)` –
+* [`std::vector`](http://www.cplusplus.com/reference/vector/vector) –
 динамичен масив (последователно представяне)
 
 Конкатенация
