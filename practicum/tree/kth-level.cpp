@@ -37,6 +37,8 @@ list<int> kth_level(const Tree& tree, int k) {
     nodes.pop();
     --current_level_nodes_count;
   }
+
+  return nodes_on_kth_level;
 }
 
 void print_list(const list<int>& list) {
