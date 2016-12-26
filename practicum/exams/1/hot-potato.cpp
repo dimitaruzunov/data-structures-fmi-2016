@@ -22,9 +22,8 @@ list<string> hot_potato(const list<string>& players, int passes) {
 
   while (circle.size() > 1) {
     for (int i = 0; i < passes; ++i) {
-      const string& current_player = circle.front();
+      circle.push(circle.front());
       circle.pop();
-      circle.push(current_player);
     }
 
     players_ranking.push_back(circle.front());
@@ -94,13 +93,12 @@ void read_game_results(const char* game_output_file) {
 int main() {
   int passes;
   list<string> players = read_game("game-input.txt", passes);
-
   list<string> players_ranking = hot_potato(players, passes);
 
   write_game(players_ranking, "game-output.txt");
+  cout << '\n';
 
   write_game_binary(players_ranking, "game-output.bin");
-
   read_game_results("game-output.bin");
 
   return 0;
