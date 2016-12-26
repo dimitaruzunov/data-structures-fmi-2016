@@ -7,6 +7,7 @@
 using std::cout;
 using std::ifstream;
 using std::ofstream;
+using std::ios;
 using std::list;
 using std::string;
 using std::queue;
@@ -69,6 +70,27 @@ void write_game(const list<string>& players_ranking, const char* game_output_fil
   file.close();
 }
 
+void write_game_binary(const list<string>& players_ranking, const char* game_output_file) {
+  ofstream file(game_output_file, ios::binary);
+
+  for (const string& player : players_ranking) {
+    file.write((player + "\n").c_str(), player.size() + 1);
+  }
+}
+
+void read_game_results(const char* game_output_file) {
+  ifstream file(game_output_file, ios::binary);
+
+  const int BUFFER_SIZE = 100;
+  char buffer[BUFFER_SIZE];
+
+  long read_count = 0;
+  while ((read_count = file.read(buffer, BUFFER_SIZE - 1).gcount())) {
+    buffer[read_count] = '\0';
+    cout << buffer;
+  }
+}
+
 int main() {
   int passes;
   list<string> players = read_game("game-input.txt", passes);
@@ -76,6 +98,10 @@ int main() {
   list<string> players_ranking = hot_potato(players, passes);
 
   write_game(players_ranking, "game-output.txt");
+
+  write_game_binary(players_ranking, "game-output.bin");
+
+  read_game_results("game-output.bin");
 
   return 0;
 }
