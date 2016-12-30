@@ -12,7 +12,7 @@
 
 Примери
 -------
-Дървото ![Tree example 1](tree-example-1.png 'Tree example 1') е ритмично.
+Дървото ![Tree example 1](tree-example-1.eps 'Tree example 1') е ритмично.
 Дървото ![Tree example 2](tree-example-2.svg 'Tree example 2') не е ритмично,
 тъй като пътят от корена до листото със стойност -2
 (по-конкретно това е пътят `1, 0, -2`) не е ритмичен, защото
