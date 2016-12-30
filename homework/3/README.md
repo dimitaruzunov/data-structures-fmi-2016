@@ -12,12 +12,11 @@
 
 Примери
 -------
-Дървото ![Tree example 1](https://cdn.rawgit.com/dimitaruzunov/data-structures-fmi-2016/master/homework/3/tree-example-1.svg
-'Tree example 1') е ритмично.
+Дървото ![Tree example 1](https://cdn.rawgit.com/dimitaruzunov/data-structures-fmi-2016/1d73e95f6e8432dbd80b597e3dd10ed4f99d6b04/homework/3/tree-example-1.svg 'Tree example 1') е ритмично.
 
-Дървото ![Tree example 2](https://cdn.rawgit.com/dimitaruzunov/data-structures-fmi-2016/master/homework/3/tree-example-2.svg
-'Tree example 2') не е ритмично, тъй като пътят от корена до листото
-със стойност -2 (по-конкретно това е пътят `1, 0, -2`) не е ритмичен, защото
+Дървото ![Tree example 2](https://cdn.rawgit.com/dimitaruzunov/data-structures-fmi-2016/1d73e95f6e8432dbd80b597e3dd10ed4f99d6b04/homework/3/tree-example-2.svg 'Tree example 2') не е ритмично,
+тъй като пътят от корена до листото със стойност -2
+(по-конкретно това е пътят `1, 0, -2`) не е ритмичен, защото
 `|0 - (-2)| = 2 ≠ 1`.
 
 Представяне на кореново дърво
