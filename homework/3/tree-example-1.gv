@@ -1,0 +1,24 @@
+graph T {
+  node [shape = circle]
+  node11 [label = "1"]
+  node12 [label = "1"]
+  node13 [label = "1"]
+
+  invis1 [label = "", width = .1, style = invis]
+  invis2 [label = "", width = .1, style = invis]
+  invis3 [label = "", style = invis]
+
+  node11 -- 2 -- 3
+  2 -- invis1 [style = invis]
+  2 -- node12
+  {rank = same 3 -- invis1 -- node12 [style = invis]}
+
+  node11 -- invis3 [style = invis]
+
+  node11 -- 0 -- node13
+  0 -- invis2 [style = invis]
+  0 -- -1
+  {rank = same node13 -- invis2 -- -1 [style = invis]}
+
+  {rank = same 2 -- invis3 -- 0 [style = invis]}
+}
