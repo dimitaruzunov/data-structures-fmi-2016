@@ -40,18 +40,19 @@ public:
           == visited.end())
         DFS(n, visited);
   }
-  list<int> DFSPath(int a, int b, list<int>& visited, list<int>& path) {
+  bool DFSPath(int a, int b, list<int>& visited, list<int>& path) {
     visited.push_back(a);
     path.push_back(a);
-    cout << a << " ";
     if (a == b)
-      return path;
+      return true;
+    bool found = false;
     for (int n : v[a])
       if (find(visited.begin(), visited.end(), n)
           == visited.end())
-        return DFSPath(n, b, visited, path);
-    path.pop_back();
-    return path;
+        found = found || DFSPath(n, b, visited, path);
+    if (!found)
+      path.pop_back();
+    return found;
   }
   void DFSNonRecursive(int u) {
     stack<int> front;
@@ -61,11 +62,11 @@ public:
       int c = front.top();
       visited.push_back(c);
       cout << c << " ";
+      front.pop();
       for (int n : v[c])
         if (find(visited.begin(), visited.end(), n)
             == visited.end())
           front.push(n);
-      front.pop();
     }
   }
   void BFS(int u) {
@@ -83,23 +84,34 @@ public:
       front.pop();
     }
   }
+
 };
 
 int main() {
   Graph g;
   g.addEdge(1, 2);
-//  g.addEdge(1, 3);
+  g.addEdge(1, 3);
   g.addEdge(3, 4);
   g.addEdge(3, 5);
   g.addEdge(3, 6);
   g.addEdge(6, 7);
-//  g.addEdge(4, 8);
+  g.addEdge(4, 8);
   g.addEdge(8, 9);
   g.addEdge(2, 10);
   g.addEdge(10, 11);
   list<int> visited;
   list<int> path;
-  int c = g.DFS();
-  cout << c;
+//  int c = g.DFS();
+//  cout << c;
+
+//  g.DFSNonRecursive(1);
+
+  if (g.DFSPath(7, 11, visited, path))
+    for (int v : path)
+      cout << v << " ";
+  else
+    cout << "No such path";
+  cout << "\n";
+
   return 0;
 }
