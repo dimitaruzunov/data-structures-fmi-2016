@@ -77,11 +77,11 @@ public:
       int c = front.front();
       visited.push_back(c);
       cout << c << " ";
+      front.pop();
       for (int n : v[c])
         if (find(visited.begin(), visited.end(), n)
             == visited.end())
           front.push(n);
-      front.pop();
     }
   }
 
