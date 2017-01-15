@@ -79,3 +79,5 @@ Petar
 Напишете функция
 `void write_game_binary(const list<string>& players_ranking, const char* game_output_file)`,
 която записва резултатите от изиграна игра в двоичен файл с име `game_output_file`.
+
+[Решение](hot-potato.cpp)
