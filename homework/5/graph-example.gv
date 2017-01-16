@@ -1,0 +1,10 @@
+graph G {
+  graph [rankdir = LR]
+  node [shape = circle]
+
+  22 -- 25 -- 6
+  10 -- 42 -- 56
+  22 -- 10
+  25 -- 42
+  6 -- 42
+}
