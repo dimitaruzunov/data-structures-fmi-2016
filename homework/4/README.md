@@ -36,6 +36,7 @@
 Пример
 ------
 Нека имаме следния граф на сградите в града:
+
 ![Graph example](https://cdn.rawgit.com/dimitaruzunov/data-structures-fmi-2016/7fd63cec/homework/4/graph-example.svg 'Graph example')
 
 Тогава извикването `sound_waves_order(graph, 22)` трябва да върне списъка
