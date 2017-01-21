@@ -27,14 +27,13 @@ bool is_prefix(queue<int> prefix, list<int>& current_path) {
 bool path_with_prefix(Graph& graph, queue<int>& prefix, int start, int end,
                       set<int>& visited, list<int>& current_path) {
   visited.insert(start);
-
   current_path.push_back(start);
 
   if (start == end && is_prefix(prefix, current_path)) {
     return true;
   } else if (start == end) {
-    visited.erase(current_path.back());
     current_path.pop_back();
+    visited.erase(start);
 
     return false;
   }
@@ -46,8 +45,8 @@ bool path_with_prefix(Graph& graph, queue<int>& prefix, int start, int end,
     }
   }
 
-  visited.erase(current_path.back());
   current_path.pop_back();
+  visited.erase(start);
 
   return false;
 }
