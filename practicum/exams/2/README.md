@@ -17,7 +17,7 @@
 ### Пример
 Нека имаме следния граф:
 
-![Graph example](https://cdn.rawgit.com/dimitaruzunov/data-structures-fmi-2016/cddc11ba/homework/5/graph-example.svg 'Graph example')
+![Graph example](https://cdn.rawgit.com/dimitaruzunov/data-structures-fmi-2016/362effef/practicum/exams/2/graph-example.svg 'Graph example')
 
 Нека имаме и опашката `(22, 25, 42)`, която сме конструирали по следния начин:
 ```cpp
@@ -39,3 +39,5 @@ prefix.push(42);
 списъка `()`
 * Извикването `path_with_prefix(graph, prefix, 6, 10)` трябва да върне
 списъка `()`
+
+[Решение](path-with-prefix.cpp)
